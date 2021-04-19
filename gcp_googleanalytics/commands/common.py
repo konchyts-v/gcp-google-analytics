@@ -3,7 +3,7 @@
 import click
 import inspector
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 
 
 @click.group(invoke_without_command=True)
@@ -23,4 +23,4 @@ def cli(ctx, identity, account, webproperty, profile, version):
         save=True)
 
     if version:
-        click.echo('googleanalytics {}'.format(ga.__version__))
+        click.echo('gcp_googleanalytics {}'.format(ga.__version__))

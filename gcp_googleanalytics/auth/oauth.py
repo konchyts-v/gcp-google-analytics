@@ -7,7 +7,7 @@ import addressable
 from oauth2client import client
 from apiclient import discovery
 
-from googleanalytics import utils, account
+from gcp_googleanalytics import utils, account
 from .credentials import Credentials, normalize
 
 

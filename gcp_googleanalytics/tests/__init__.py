@@ -16,7 +16,7 @@ The account you're using for these unit tests should have
 at least one Google Analytics domain set up.
 """
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 import unittest
 import datetime
 

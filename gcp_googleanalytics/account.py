@@ -26,7 +26,7 @@ class Account(object):
     You should navigate to a profile to run queries.
 
     ```python
-    import googleanalytics as ga
+    import gcp_googleanalytics as ga
     accounts = ga.authenticate()
     profile = accounts['debrouwere.org'].webproperties['UA-12933299-1'].profiles['debrouwere.org']
     report = profile.core.query('pageviews').range('2014-10-01', '2014-10-31').get()
@@ -68,7 +68,7 @@ class Account(object):
         return self.webproperties[0].query(*vargs, **kwargs)
 
     def __repr__(self):
-        return "<googleanalytics.account.Account object: {} ({})>".format(
+        return "<gcp_googleanalytics.account.Account object: {} ({})>".format(
             self.name, self.id)
 
 
@@ -120,7 +120,7 @@ class WebProperty(object):
         return self.profiles[0].query(*vargs, **kwargs)
 
     def __repr__(self):
-        return "<googleanalytics.account.WebProperty object: {} ({})>".format(
+        return "<gcp_googleanalytics.account.WebProperty object: {} ({})>".format(
             self.name, self.id)
 
 
@@ -146,7 +146,7 @@ class Profile(object):
         self.realtime = RealTimeReportingAPI(self)
 
     def __repr__(self):
-        return "<googleanalytics.account.Profile object: {} ({})>".format(
+        return "<gcp_googleanalytics.account.Profile object: {} ({})>".format(
             self.name, self.id)
 
 
@@ -221,7 +221,7 @@ class ReportingAPI(object):
         raise NotImplementedError()
 
     def __repr__(self):
-        return '<googleanalytics.account.{} object>'.format(self.__class__.__name__)
+        return '<gcp_googleanalytics.account.{} object>'.format(self.__class__.__name__)
 
 
 class CoreReportingAPI(ReportingAPI):

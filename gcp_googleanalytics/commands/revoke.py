@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 import click
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 
 from .common import cli
 

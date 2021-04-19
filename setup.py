@@ -2,19 +2,19 @@ import codecs
 
 from setuptools import find_packages, setup
 
-setup(name='googleanalytics',
+setup(name='gcp_googleanalytics',
     description='A wrapper for the Google Analytics API.',
     long_description=codecs.open('README.rst', 'r', 'utf-8').read(),
     author='Stijn Debrouwere',
     author_email='stijn@debrouwere.org',
-    url='https://github.com/debrouwere/google-analytics/',
-    download_url='http://www.github.com/debrouwere/google-analytics/tarball/master',
-    version='0.26.0',
+    url='https://github.com/konchyts-v/gcp-google-analytics/',
+    download_url='https://github.com/konchyts-v/gcp-google-analytics/tarball/master',
+    version='1.0.0',
     license='ISC',
     packages=find_packages(),
     keywords='data analytics api wrapper google',
     scripts=[
-        'bin/googleanalytics'
+        'bin/gcp_googleanalytics'
     ],
     include_package_data=True,
     install_requires=[
@@ -31,7 +31,7 @@ setup(name='googleanalytics',
         'colorama>=0.3',
         'snakify>=1.1',
     ],
-    test_suite='googleanalytics.tests',
+    test_suite='gcp_googleanalytics.tests',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',

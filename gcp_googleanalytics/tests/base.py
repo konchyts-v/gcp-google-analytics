@@ -2,7 +2,7 @@
 
 import unittest
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 
 
 class TestCase(unittest.TestCase):

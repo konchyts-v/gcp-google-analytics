@@ -300,10 +300,10 @@ class Report(object):
         metrics = ', '.join([header.name for header in self.metrics])
         dimensions = ','.join([header.name for header in self.dimensions])
         if len(dimensions):
-            return '<googleanalytics.query.Report object: {} by {}'.format(
+            return '<gcp_googleanalytics.query.Report object: {} by {}'.format(
                 metrics, dimensions)
         else:
-            return '<googleanalytics.query.Report object: {}'.format(
+            return '<gcp_googleanalytics.query.Report object: {}'.format(
                 metrics)
 
 
@@ -655,7 +655,7 @@ class Query(object):
                 ))
 
     def __repr__(self):
-        return "<googleanalytics.query.{} object: {} ({})>".format(self.__class__.__name__, self.title, self.profile.name)
+        return "<gcp_googleanalytics.query.{} object: {} ({})>".format(self.__class__.__name__, self.title, self.profile.name)
 
 
 class CoreQuery(Query):

@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 import datetime
 
 from . import base

@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 
 from . import base
 

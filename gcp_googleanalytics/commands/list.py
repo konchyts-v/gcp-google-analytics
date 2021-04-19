@@ -5,7 +5,7 @@ import re
 import click
 from prettytable import PrettyTable
 
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 from .common import cli
 
 

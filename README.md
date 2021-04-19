@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/debrouwere/google-analytics.svg)](https://travis-ci.org/debrouwere/google-analytics)
 
-`google-analytics` takes the pain out of working with the Google Analytics reporting APIs. It supports both the Core and the Real Time API. It is written in Python but there's also a full-featured command-line interface.
+`gcp-google-analytics` (forked) takes the pain out of working with the Google Analytics reporting APIs. It supports both the Core and the Real Time API. It is written in Python but there's also a full-featured command-line interface.
 
 * **Authentication.** OAuth2 is a bit of a pain and we've made it easier, both for interactive use and for [server applications][rauth]. We can also save your credentials in the operating system's keychain if you want to.
 * **Querying.** Easier to query per week, month or year. Query using metric IDs or using their full names, whichever you think is nicer. Work with both the Core and the Real Time APIs.
@@ -28,7 +28,7 @@ Then, create a new project in the [Google Developers Console](https://console.de
 After that, executing your first query is as easy as
 
 ```python
-import googleanalytics as ga
+import gcp_googleanalytics as ga
 accounts = ga.authenticate()
 profile = accounts[0].webproperties[0].profile
 pageviews = profile.core.query.metrics('pageviews').range('yesterday').value
@@ -38,7 +38,7 @@ print(pageviews)
 Or on the command-line, that'd be:
 
 ```shell
-googleanalytics --identity <identity> --account <account> --webproperty <webproperty> \
+gcp_googleanalytics --identity <identity> --account <account> --webproperty <webproperty> \
     query pageviews --start yesterday
 ```
 

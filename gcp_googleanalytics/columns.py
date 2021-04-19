@@ -176,7 +176,7 @@ class Column(object):
             'rt': 'Realtime',
             None: 'Unbound',
         }
-        return "<googleanalytics.columns.{query_type} object: {column_type}, {name} ({id})>".format(
+        return "<gcp_googleanalytics.columns.{query_type} object: {column_type}, {name} ({id})>".format(
             query_type=report_types[self.report_type],
             column_type=self.type.capitalize(),
             name=self.name,
@@ -197,7 +197,7 @@ class Segment(Column):
         self.definition = raw['definition']
 
     def __repr__(self):
-        return "<googleanalytics.columns.Segment object: {name} ({id})>".format(**self.__dict__)
+        return "<gcp_googleanalytics.columns.Segment object: {name} ({id})>".format(**self.__dict__)
 
 
 

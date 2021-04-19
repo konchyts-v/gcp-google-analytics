@@ -1,10 +1,10 @@
 import os
 from flask import Flask, request, redirect, jsonify
-import googleanalytics
+import gcp_googleanalytics
 
 app = Flask(__name__)
 
-flow = googleanalytics.auth.Flow(
+flow = gcp_googleanalytics.auth.Flow(
     os.environ['GOOGLE_ANALYTICS_CLIENT_ID'],
     os.environ['GOOGLE_ANALYTICS_CLIENT_SECRET'],
     redirect_uri='http://localhost:5000/auth/google/callback')

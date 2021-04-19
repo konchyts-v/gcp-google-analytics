@@ -4,8 +4,8 @@ import json
 import yaml
 import click
 
-import googleanalytics as ga
-from googleanalytics import utils
+import gcp_googleanalytics as ga
+from gcp_googleanalytics import utils
 from .common import cli
 
 
@@ -103,7 +103,7 @@ def query(scope, blueprint, debug, output, with_metadata, realtime, **descriptio
     """
     e.g.
 
-        googleanalytics --identity debrouwere --account debrouwere --webproperty http://debrouwere.org \
+        gcp_googleanalytics --identity debrouwere --account debrouwere --webproperty http://debrouwere.org \
             query pageviews \
             --start yesterday --limit -10 --sort -pageviews \
             --dimensions pagepath \
