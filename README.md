@@ -20,8 +20,8 @@ This package is built on top of [Google's own API client for Python][apiclient].
 
 First, install the package using [pip](https://pip.pypa.io/en/latest/)
 
-* Python 2: `pip install googleanalytics`
-* Python 3: `pip3 install googleanalytics`
+* Python 2: `pip install gcp_googleanalytics`
+* Python 3: `pip3 install gcp_googleanalytics`
 
 Then, create a new project in the [Google Developers Console](https://console.developers.google.com), enable the  Analytics API under "APIs & auth > APIs" and generate credentials for an installed application under "APIs & auth > Credentials". Keep this page open. For more detail, look at the [wiki page on authentication](https://github.com/debrouwere/google-analytics/wiki/Authentication).
 
